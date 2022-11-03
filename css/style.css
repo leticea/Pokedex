@@ -39,5 +39,10 @@ main {
     color: #aaa;
     top: 54.5%;
     right: 27%;
+    font-size: clamp(8px, 5vw, 25px);
 }
 
+.pokemon-name {
+    color: #3a444d;
+    text-transform: capitalize;
+}
