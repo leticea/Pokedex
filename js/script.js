@@ -4,6 +4,8 @@ const pokemonImage = document.querySelector('.pokemon-image');
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.input-search');
+const buttonPrev = document.querySelector('.btn-prev');
+const buttonNext = document.querySelector('.btn-next');
 
 const fetchPokemon = async (pokemon) => {
 
@@ -43,3 +45,15 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     renderPokemon(input.value);    
 });
+
+buttonPrev.addEventListener('click', () => {
+
+    alert('prev clicked')
+});
+
+buttonNext.addEventListener('click', () => {
+
+    alert('next clicked')
+});
+
+renderPokemon('1');
