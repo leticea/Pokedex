@@ -29,6 +29,7 @@ const renderPokemon = async (pokemon) => {
 
     if (data) {
 
+        pokemonImage.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
@@ -56,7 +57,8 @@ buttonPrev.addEventListener('click', () => {
 
 buttonNext.addEventListener('click', () => {
 
-    alert('next clicked')
+    searchPokemon += 1;
+    renderPokemon(searchPokemon);
 });
 
-renderPokemon('1');
+renderPokemon(searchPokemon);
