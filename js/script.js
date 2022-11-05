@@ -17,7 +17,7 @@ const fetchPokemon = async (pokemon) => {
 
         const data = await APIResponse.json();
         return data;
-    }
+    };
 }
 
 const renderPokemon = async (pokemon) => {
@@ -41,7 +41,7 @@ const renderPokemon = async (pokemon) => {
         pokemonImage.style.display = 'none';
         pokemonName.innerHTML = 'Not found :c';
         pokemonNumber.innerHTML = '';
-    }
+    };
 }
 
 form.addEventListener('submit', (event) => {
@@ -52,7 +52,11 @@ form.addEventListener('submit', (event) => {
 
 buttonPrev.addEventListener('click', () => {
 
-    alert('prev clicked')
+    if (searchPokemon > 1) {
+
+        searchPokemon -= 1;
+        renderPokemon(searchPokemon);
+    };
 });
 
 buttonNext.addEventListener('click', () => {
