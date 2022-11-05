@@ -3,6 +3,7 @@ const pokemonNumber = document.querySelector('.pokemon-number');
 const pokemonImage = document.querySelector('.pokemon-image');
 
 const form = document.querySelector('.form');
+const input = document.querySelector('.input-search');
 
 const fetchPokemon = async (pokemon) => {
 
@@ -24,6 +25,5 @@ form.addEventListener('submit', (event) => {
 
     event.preventDefault();
 
-    console.log('enviando formulario...');
-
+    renderPokemon(input.value);
 });
